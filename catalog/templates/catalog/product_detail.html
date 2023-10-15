@@ -1,0 +1,31 @@
+{% extends 'catalog/base.html' %}
+
+{% block content %}
+    <div class="col-6">
+        <div class="card">
+            <img src="/media/{{ object.image_preview }}" class="card-img-top img-fluid"/>
+            <div class="card-header">
+                <h3 class="card-title">
+                    Информация о товаре
+                </h3>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <tr>
+                        <td>Название</td>
+                        <td>{{ object.name }}</td>
+                    </tr>
+                    <tr>
+                        <td>Описание</td>
+                        <td>{{ object.description }}</td>
+                    </tr>
+                    <tr>
+                        <td>Стоимость</td>
+                        <td>{{ object.purchase_price }}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="card-footer"></div>
+        </div>
+    </div>
+{% endblock %}
