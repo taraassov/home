@@ -1,0 +1,25 @@
+{% extends 'catalog/base.html' %}
+{% load my_tags %}
+{% block content %}
+<div class="row">
+    {% for object in object_list %}
+    <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+            <div class="card-body">
+                <p class="card-text">Товар: {{object.name}}</p>
+                <p class="card-text">{{object.description}}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<footer class="text-muted">
+    <div class="container">
+        <p class="float-right">
+            <a href="{% url 'catalog:home' %}">На главную</a>
+    </div>
+</footer>
+{% endblock %}
